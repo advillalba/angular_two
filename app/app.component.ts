@@ -4,8 +4,14 @@ import {Component} from 'angular2/core';
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 @Component({
     selector: 'my-app',
-    template: '<h1>Hola mundo con Angular 2 !! victorroblesweb.es</h1>'
+    templateUrl:"app/view/peliculas.html"
+    
 })
  
 // Clase del componente donde iran los datos y funcionalidades
-export class AppComponent { }
+export class AppComponent {
+	public titulo:string = "Películas con Angular2";
+	public pelicula:string = "Batman vs Superman";
+	public director:string = "Zack Snider";
+	public anio:number = 2016;
+}
