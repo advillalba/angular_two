@@ -1,0 +1,8 @@
+h1 {
+	font-family: Arial, Helvetica;
+	color: #444;
+	text-decoration: underline;
+}
+.showingData {
+	display: none;
+}
