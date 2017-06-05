@@ -29,8 +29,14 @@ System.register(["angular2/core", "./model/pelicula"], function(exports_1, conte
                     this.pelicula = new pelicula_1.Pelicula(1, "Batman vs Superman", "Zack Snider", 2016);
                     this.debug();
                 }
-                AppComponent.prototype.debug = function () {
-                    console.log(this.pelicula);
+                AppComponent.prototype.debug = function (titulo) {
+                    if (titulo === void 0) { titulo = null; }
+                    if (titulo != null) {
+                        console.log("Título: " + this.pelicula.titulo);
+                    }
+                    else {
+                        console.log(this.pelicula);
+                    }
                 };
                 AppComponent.prototype.onShowHide = function (value) {
                     this.mostrarDatos = value;
