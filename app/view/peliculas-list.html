@@ -18,7 +18,7 @@ Cambiar título:
 <p>Lista de películas</p>
 <ul>
     <ul *ngFor="#pelicula of peliculas" style="margin-bottom: 15px">
-	    <li (click)="onCambiarPelicula(pelicula)" class="pelicula-title" [class.clicked]="peliculaElegida.id === pelicula.id">Título: <strong>{{pelicula.titulo}}</strong></li>
+	    <li (click)="onCambiarPelicula(pelicula)" class="pelicula-title" [class.clicked]="peliculaElegida.titulo === pelicula.titulo">Título: <strong>{{pelicula.titulo}}</strong></li>
 	    <li>Director: <strong>{{pelicula.director}}</strong></li>
 	    <li *ngIf="pelicula.anio">Año: <strong>{{pelicula.anio}}</strong></li>
     </ul>
