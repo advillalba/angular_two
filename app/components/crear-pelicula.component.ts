@@ -1,7 +1,9 @@
 // Importar el núcleo de Angular
 import {Component} from "angular2/core";
+import {onInit} from "angular2/core";
 import {Pelicula} from "../model/pelicula";
-import {Router} from "angular2/router";
+import {Router, RouteParams} from "angular2/router";
+
 import {PeliculasService} from "../services/peliculas.service";
 
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
@@ -13,9 +15,9 @@ import {PeliculasService} from "../services/peliculas.service";
 
  
 // Clase del componente donde iran los datos y funcionalidades
-export class CrearPeliculaComponent {
-
-	constructor(private _peliculasService: PeliculasService, private _router:Router){
+export class CrearPeliculaComponent implements onInit {
+public TituloPelicula = "";
+	constructor(private _peliculasService: PeliculasService, private _router:Router, private _routerParams:RouteParams){
 
 	}
 
@@ -26,5 +28,7 @@ export class CrearPeliculaComponent {
 		
 
 	}
-	
+	ngOnInit():any{
+		this.TituloPelicula = this._routerParams.get("titulo");
+	}
 }
